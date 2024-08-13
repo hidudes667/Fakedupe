@@ -1,0 +1,57 @@
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({
+    Name = "MM2 Duperv2",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "OrionTest",
+    IntroEnabled = true,
+    IntroText = "MM2FUCKER💦",
+    IntroIcon = "rbxassetid://4483345998"
+})
+
+local DupeTab = Window:MakeTab({
+    Name = "Dupe",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+DupeTab:AddButton({
+    Name = "Dupe equipped weapons",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Dupe equipped weapons",
+            Content = "Dupe loading wait in game for 5 minutes...",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        
+        -- Wait for 360 seconds (6 minutes) before kicking the player
+        wait(360)
+        
+        -- Kick the player from the game with the message "Check ur inv"
+        game.Players.LocalPlayer:Kick("Check ur inv.")
+    end    
+})
+
+local ScamTab = Window:MakeTab({
+    Name = "Trade Scam",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+ScamTab:AddButton({
+    Name = "Initiate Trade Scam",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Trade Scam in Progress",
+            Content = "Trade scam loading... Stay in game for 5 minutes.",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+
+        -- This button does NOT kick the player after 360 seconds
+    end    
+})
